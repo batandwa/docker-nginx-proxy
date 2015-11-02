@@ -1,11 +1,5 @@
-web:
+proxy:
   extends:
-    file: docker-compose.yml
-    service: web
+    file: docker-compose-common.yml
+    service: proxy
   restart: always
-  volumes:
-    - ./app:/var/app
-    - ./server_conf/default_site.conf:/etc/apache2/sites-available/000-default.conf
-    - ./server_conf/mailcather.ini:/etc/php5/apache2/conf.d/99-mailcatcher.ini
-    - ~/projects:/projects
-    - ./setup.sh:/setup.sh
