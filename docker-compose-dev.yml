@@ -1,0 +1,5 @@
+proxy:
+  extends:
+    file: docker-compose-common.yml
+    service: proxy
+  restart: always
